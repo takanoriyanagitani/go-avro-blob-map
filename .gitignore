@@ -23,3 +23,6 @@ go.work.sum
 
 # env file
 .env
+*.swp
+cmd/avroblob2wasm2blob/avroblob2wasm2blob
+cmd/avroblobjson2cbor/avroblobjson2cbor
