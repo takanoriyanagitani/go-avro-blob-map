@@ -3,12 +3,12 @@
 export ENV_SCHEMA_FILENAME=sample.d/sample.avsc
 export ENV_BLOB_KEY=data
 
-jsons2avro(){
+jsons2avro() {
 	cat sample.d/sample.jsonl |
-    	ENV_SCHEMA_FILENAME=sample.d/inputgen.avsc \
+		ENV_SCHEMA_FILENAME=sample.d/inputgen.avsc \
 			json2avrows |
 		../avroblobjson2cbor/avroblobjson2cbor |
-		cat > ./sample.d/input.avro
+		cat >./sample.d/input.avro
 }
 
 #jsons2avro
@@ -33,4 +33,4 @@ cat sample.d/input.avro |
 		tool \
 		run \
 		cbor2 \
-			--sequence
+		--sequence
